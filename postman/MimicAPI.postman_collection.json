@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "4acebb31-0f6f-4a8f-8723-bf390a0d72a0",
+		"name": "MimicAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Words",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE1OTE2NzAwODgsImlhdCI6MTU5MTY1MjA4OH0.j6nd_s7VFvPVbh4abKrjeaYxgmDCxMxc0O18lPz2juONf3zvKBO7vx-w2WO2b_BJnOl5vAI_5DLg5RrgIZ5WEg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Word",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Dog\",\n\t\"score\": 5,\n\t\"active\": true,\n    \"category\": \"animal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get word by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/words/Dog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"words",
+						"Dog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete word by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/words/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"words",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
